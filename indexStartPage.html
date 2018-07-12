@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+<link rel="stylesheet" href="styleStartPage.css">
+    <style>
+
+        #canvas {
+          background: #fefefe;
+          border: thin soldi lightgray;
+          -webkit-box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+          -moz-box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+          box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+          display: block;
+                   position: absolute;
+                   top: 0;
+                   left: 0;
+                   right: 0;
+                   bottom: 0;
+                   width: 100%;
+                   height: 100%;
+        }
+
+    </style>
+  </head>
+
+  <body>
+
+
+    <div id="lines-container">
+      <div class="line-div">
+        <div class="line-div">
+          <div class="line-div">
+            <div class="line-div">
+              <div class="line-div">
+      </div>
+      </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+<div id="container_2">
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+</div>
+
+<div id="container_3">
+  <ul>
+    <li>L</li>
+    <li>O</li>
+    <li>A</li>
+    <li>D</li>
+    <li>I</li>
+    <li>N</li>
+    <li>G</li>
+  </ul>
+</div>
+
+
+  <canvas id="canvas"> </canvas>
+  <script src="fileStartPage.js"></script>
+
+  <div id="main-content" class="welcome-section content-hidden">
+      <div class="content-wrap">
+          <ul class="fly-in-text">
+              <li>Welcome</li>
+              <li>stranger</li><br>
+
+
+
+          </ul>
+          <script>
+          redirectTime = "900";
+          redirectURL = "indexMainPage.html";
+          function timedRedirect() {
+          	setTimeout("location.href = redirectURL;",redirectTime);
+          }
+          </script>
+          <a href="#" class="enter-button" onclick="JavaScript:timedRedirect() ">view the pieces</a>
+      </div>
+  </div>
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript">
+
+      $(function() {
+
+          var welcomeSection = $('.welcome-section'),
+              enterButton = welcomeSection.find('.enter-button');
+          $('#main-content').hide();
+          $('#canvas').hide();
+          setTimeout(function(){
+            $('#loader-container').remove();
+            $('#main-content').show();
+            $('#canvas').show();
+          },10000);
+          setTimeout(function() {
+              welcomeSection.removeClass('content-hidden');
+          }, 12500);
+
+
+          enterButton.on('click', function(e) {
+              e.preventDefault();
+              welcomeSection.addClass('content-hidden').fadeOut();
+          });
+
+
+      })();
+
+
+
+  </script>
+
+
+</body>
+
+</html>

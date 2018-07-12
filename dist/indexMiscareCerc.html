@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="styleMiscareCerc.css">
+	<title>Canvas Template</title>
+
+</head>
+<body>
+
+  <div class="hamburger" onclick="location.href='../IndexMainPage.html'; ">
+    <div class="top-bun"></div>
+    <div class="meat"></div>
+    <div class="bottom-bun"></div>
+  </div>
+
+
+<div id = "sidebar">
+
+		<ul>
+			<br>
+			<strong id="text1">Customize canvas</strong>
+			<li><input type="text" id="nrBlue" onfocusout="reinitialize()" placeholder="Number of particle"></li>
+			<li><input type="text" id="sinF" onchange="reinitialize()" placeholder="Enter sin"></li>
+			<li><input type="text" id="cosF" onchange="reinitialize()" placeholder="Enter cos"></li>
+			<li><input type="text" id="culoare1" onchange="reinitialize()" placeholder="Color 1"></li>
+			<li><input type="text" id="culoare2" onchange="reinitialize()" placeholder="Color 2"></li>
+			<li><input type="text" id="culoare3" onchange="reinitialize()" placeholder="Color 3"></li>
+
+
+
+		</ul>
+
+
+
+	</div>
+
+<div id="toggle-btn" onclick="toggleSidebar(this)">
+  <span></span>
+    <span></span>
+      <span></span>
+
+</div>
+  <script src="sideBar.js"></script>
+
+	<canvas></canvas>
+	<script src="canvas.bundle.js"></script>
+</body>
+</html>
